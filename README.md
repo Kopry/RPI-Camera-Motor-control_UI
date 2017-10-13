@@ -33,7 +33,7 @@ Celui-ci a été compilé et utilisé sur une Debian 8
 
 ## Auteurs
 
-* **Kopry** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Kopry** - (https://github.com/Kopry)
 
 ## Licence
 
