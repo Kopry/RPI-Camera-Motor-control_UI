@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/boutons">
+        <file>ressource/check.png</file>
+        <file>ressource/uncheck.png</file>
+    </qresource>
+    <qresource prefix="/divers">
+        <file>ressource/camera.png</file>
+    </qresource>
+</RCC>

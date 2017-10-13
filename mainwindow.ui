@@ -1,0 +1,1940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1350</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1350</width>
+    <height>630</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1350</width>
+    <height>630</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Console de controle du robot</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FFFFFF;
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="quitButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>560</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#d34836;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}
+
+QPushButton:pressed {
+	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#ff4343;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Quitter</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkActif1">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>380</y>
+      <width>20</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkActif2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>416</y>
+      <width>20</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slDist1">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>380</y>
+      <width>441</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    background: red;
+	position: absolute; 
+	left: 12px; right: 12px;
+
+}
+
+QSlider::handle:horizontal {
+	height:10;
+    background: green;
+	margin: 0 -6px; /* expand outside the groove */
+	border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+    background: white;
+}
+
+QSlider::sub-page:horizontal {
+    background: #DAF7A6;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>999</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slDist2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>420</y>
+      <width>441</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    background: red;
+	position: absolute; 
+	left: 12px; right: 12px;
+
+}
+
+QSlider::handle:horizontal {
+	height:10;
+    background: green;
+	margin: 0 -6px; /* expand outside the groove */
+	border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+    background: white;
+}
+
+QSlider::sub-page:horizontal {
+    background: #DAF7A6;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>999</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkSens2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>417</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkSens1">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>380</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Actif</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>340</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Sens</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>380</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Moteur 1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>420</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Moteur 2</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leDist1">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>370</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leDist2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>410</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>350</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>PWM</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Serveur :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leIPServeur">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>170</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhDigitsOnly</set>
+    </property>
+    <property name="text">
+     <string>127.0.0.1</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leMessage">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>560</y>
+      <width>1031</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="text">
+     <string>1,0,0,0,2,0,0,0,3,0,0,0,4,0,0,0,4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>560</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #5499c7 ;</string>
+    </property>
+    <property name="text">
+     <string>Trame :</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leDist4">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>490</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slDist4">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>500</y>
+      <width>441</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    background: red;
+	position: absolute; 
+	left: 12px; right: 12px;
+
+}
+
+QSlider::handle:horizontal {
+	height:10;
+    background: green;
+	margin: 0 -6px; /* expand outside the groove */
+	border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+    background: white;
+}
+
+QSlider::sub-page:horizontal {
+    background: #DAF7A6;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>999</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkSens4">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>496</y>
+      <width>20</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slDist3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>460</y>
+      <width>441</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    background: red;
+	position: absolute; 
+	left: 12px; right: 12px;
+
+}
+
+QSlider::handle:horizontal {
+	height:10;
+    background: green;
+	margin: 0 -6px; /* expand outside the groove */
+	border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+    background: white;
+}
+
+QSlider::sub-page:horizontal {
+    background: #DAF7A6;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>999</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkSens3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>456</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leDist3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>450</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkActif3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>457</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>460</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Moteur 3</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkActif4">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>496</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>500</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Moteur 4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>170</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Veuillez indiquer </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leMessageConnexion">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>150</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="text">
+     <string>127.0.0.1:8888</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_connexion">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>230</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#478bf9;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}
+
+QPushButton:pressed {
+	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#43a1ff;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Connexion</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lePortServeur">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>220</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhDigitsOnly</set>
+    </property>
+    <property name="text">
+     <string>8888</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Port       :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_deconnexion">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>230</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#d34836;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}
+
+QPushButton:pressed {
+	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#ff4343;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Déconnexion</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>310</y>
+      <width>621</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #5499c7 ;</string>
+    </property>
+    <property name="text">
+     <string>Controle Moteur</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>118</width>
+      <height>3</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #5499c7 ;</string>
+    </property>
+    <property name="text">
+     <string>Etat Robot</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>120</y>
+      <width>651</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>200</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>l'adresse et le port du</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>230</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>serveur distant.</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leEtat_reseau">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>190</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#e8eeef;
+	color:#8a97a0;
+	border-radius:2px;
+	width:100px;
+	border:none;</string>
+    </property>
+    <property name="text">
+     <string>Actuellement déconnecté.</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="Line" name="line_7">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>530</y>
+      <width>1401</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_connexion_camera">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>60</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#478bf9;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}
+
+QPushButton:pressed {
+	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#43a1ff;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Connexion</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>201</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>201</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_12">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>201</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_9">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>10</y>
+      <width>641</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #5499c7 ;</string>
+    </property>
+    <property name="text">
+     <string>Etat Camera</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>0</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#5499c7;</string>
+    </property>
+    <property name="text">
+     <string>Flux video</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>350</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Maximum : 999</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>20</y>
+      <width>20</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_deconnexion_camera">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>60</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#d34836;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}
+
+QPushButton:pressed {
+	padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#ff4343;
+	color:#fff;
+	border-radius:2px;
+	width:100px;
+	border:none;
+}</string>
+    </property>
+    <property name="text">
+     <string>Déconnexion</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkreseau">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>190</y>
+      <width>21</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkcamera">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>60</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+}
+
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+QCheckBox::indicator:unchecked {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:checked {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:hover {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+image: url(:/boutons/ressource/uncheck.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+image: url(:/boutons/ressource/check.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="VlcWidgetVideo" name="video" native="true">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>20</y>
+      <width>571</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_camera_logo">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>0</y>
+       <width>531</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="assets.qrc">:/divers/ressource/camera.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>331</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>Status de la camera, veuillez renseigner les champs</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">	color:#8a97a0;</string>
+    </property>
+    <property name="text">
+     <string>ci dessous.</string>
+    </property>
+   </widget>
+   <zorder>line_9</zorder>
+   <zorder>quitButton</zorder>
+   <zorder>chkActif1</zorder>
+   <zorder>chkActif2</zorder>
+   <zorder>slDist1</zorder>
+   <zorder>slDist2</zorder>
+   <zorder>chkSens2</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>leDist1</zorder>
+   <zorder>leDist2</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_9</zorder>
+   <zorder>leIPServeur</zorder>
+   <zorder>leMessage</zorder>
+   <zorder>label_11</zorder>
+   <zorder>leDist4</zorder>
+   <zorder>slDist4</zorder>
+   <zorder>chkSens4</zorder>
+   <zorder>slDist3</zorder>
+   <zorder>chkSens3</zorder>
+   <zorder>leDist3</zorder>
+   <zorder>chkActif3</zorder>
+   <zorder>label_5</zorder>
+   <zorder>chkActif4</zorder>
+   <zorder>label_13</zorder>
+   <zorder>label_14</zorder>
+   <zorder>leMessageConnexion</zorder>
+   <zorder>Button_connexion</zorder>
+   <zorder>label_10</zorder>
+   <zorder>Button_deconnexion</zorder>
+   <zorder>line</zorder>
+   <zorder>label_15</zorder>
+   <zorder>line_3</zorder>
+   <zorder>line_4</zorder>
+   <zorder>label_17</zorder>
+   <zorder>label_18</zorder>
+   <zorder>leEtat_reseau</zorder>
+   <zorder>line_7</zorder>
+   <zorder>Button_connexion_camera</zorder>
+   <zorder>line_10</zorder>
+   <zorder>line_11</zorder>
+   <zorder>line_12</zorder>
+   <zorder>label_19</zorder>
+   <zorder>label_22</zorder>
+   <zorder>label_23</zorder>
+   <zorder>label_16</zorder>
+   <zorder>lePortServeur</zorder>
+   <zorder>line_2</zorder>
+   <zorder>Button_deconnexion_camera</zorder>
+   <zorder>checkreseau</zorder>
+   <zorder>checkcamera</zorder>
+   <zorder>chkSens1</zorder>
+   <zorder>video</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1350</width>
+     <height>19</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>VlcWidgetVideo</class>
+   <extends>QWidget</extends>
+   <header location="global">VLCQtWidgets/WidgetVideo.h</header>
+   <container>1</container>
+   <slots>
+    <signal>fullscreen()</signal>
+    <slot>toggleFullscreen()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>
